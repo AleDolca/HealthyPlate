@@ -1,9 +1,15 @@
 package com.example.projecthp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-public class ConectController {
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ConectController implements Initializable {
+
     @FXML
     private Button buton_conectare;
 
@@ -20,4 +26,10 @@ public class ConectController {
     void onClickButton(ActionEvent event) {
 
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
 }
