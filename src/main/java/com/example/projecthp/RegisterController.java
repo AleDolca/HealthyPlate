@@ -1,11 +1,9 @@
 package com.example.projecthp;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,13 +12,16 @@ import java.util.ResourceBundle;
 public class RegisterController  implements Initializable {
 
     @FXML
-    private Button buton_creare;
+    private Button buton_inregistrare;
 
     @FXML
-    private ChoiceBox <String> choiceBox;
+    private Button buton_conectare;
 
     @FXML
-    private Label labelChoiceBox;
+    private RadioButton rb_pacient;
+
+    @FXML
+    private RadioButton rb_medic;
 
     @FXML
     private TextField txt_nume;
@@ -28,17 +29,35 @@ public class RegisterController  implements Initializable {
     @FXML
     private TextField txt_parola;
 
-    @FXML
-    void onClickButton(ActionEvent event) {
-
-    }
-    private String[] role = {"medic", "pacient"};
-
-
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
- choiceBox.getItems().addAll(role);
+    public void initialize(URL url, ResourceBundle resources) {
+        ToggleGroup toggleGroup = new ToggleGroup();
+        rb_pacient.setToggleGroup(toggleGroup);
+        rb_medic.setToggleGroup(toggleGroup);
 
+        rb_pacient.setSelected(true);
+
+        buton_inregistrare.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                String toggleName = ((RadioButton) toggleGroup.getSelectedToggle()).getText();
+                if( !txt_nume.getText().trim().isEmpty() && !txt_parola.getText().trim().isEmpty()){
+                    ConexiuneBD.inregistrareUser(event, txt_nume.getText(), txt_parola.getText(), toggleName);
+                } else {
+                    System.out.printf("Completeaza toate campurile.\n");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Trebuie să completezi toate campurile!\n");
+                    alert.show();
+                }
+            }
+        });
+
+        buton_conectare.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.schimbaScene(event, "conectare.fxml", "Conectare", null, null);
+            }
+        });
     }
 
 }

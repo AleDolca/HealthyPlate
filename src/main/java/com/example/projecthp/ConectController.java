@@ -1,5 +1,6 @@
 package com.example.projecthp;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -22,14 +23,23 @@ public class ConectController implements Initializable {
     @FXML
     private TextField txt_parola;
 
-    @FXML
-    void onClickButton(ActionEvent event) {
-
-    }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resources) {
+        buton_conectare.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.conectareUser(event, txt_nume.getText(), txt_parola.getText());
 
+            }
+        });
+
+        buton_inregistrare.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.schimbaScene(event,"inregistrare.fxml", "Înregistrare", null, null);
+            }
+        });
     }
 
 }
