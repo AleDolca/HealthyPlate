@@ -45,7 +45,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Text fill="#a40808" layoutX="88.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contul nu s-a putut crea!" textAlignment="CENTER" wrappingWidth="200.0">
+            <Text fill="#a40808" layoutX="88.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0">
                <font>
                   <Font size="16.0" />
                </font>
