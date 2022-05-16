@@ -39,13 +39,13 @@
                 </Label>
                 <TextField fx:id="txt_nume" layoutX="186.0" layoutY="161.0" promptText="Nume" />
                 <TextField fx:id="txt_parola" layoutX="187.0" layoutY="227.0" promptText="Parolă" />
-                <Button fx:id="buton_conectare" layoutX="173.0" layoutY="290.0" mnemonicParsing="false" onAction="#onClickButton" style="-fx-background-color: #FFFFFF;" text="Conectare" />
+                <Button fx:id="buton_conectare" layoutX="161.0" layoutY="287.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #FFFFFF;" text="Conectare" />
                 <Label layoutX="121.0" layoutY="334.0" text="Nu aveți cont?">
                     <font>
                         <Font name="Times New Roman" size="13.0" />
                     </font>
                 </Label>
-                <Button fx:id="buton_inregistrare" layoutX="220.0" layoutY="330.0" mnemonicParsing="false" onAction="#onClickButton" style="-fx-background-color: #DAF7A6;" text="Înregistrare!" underline="true">
+                <Button fx:id="buton_inregistrare" layoutX="220.0" layoutY="330.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Înregistrare!" underline="true">
                     <font>
                         <Font name="Times New Roman" size="13.0" />
                     </font>
