@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecthp.PagprincipalaController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecthp.PagPrincipalaController">
     <children>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
             <children>
@@ -18,13 +18,13 @@
                         <Image url="@../../../Photo/Conectare/logo.png" />
                     </image>
                 </ImageView>
-            <ScrollPane layoutX="8.0" layoutY="89.0" prefHeight="312.0" prefWidth="171.0">
+            <ScrollPane layoutX="8.0" layoutY="89.0" prefHeight="312.0" prefWidth="171.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;">
                <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="156.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;">
                      <children>
-                        <Button fx:id="num1" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #c1cab2; -fx-background-radius: 10px;" text="nume1" />
-                        <Button fx:id="nume2" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #c1cab2; -fx-background-radius: 10px;" text="nume2" />
-                        <Button fx:id="nume3" layoutX="22.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #c1cab2; -fx-background-radius: 10px;" text="nume3" />
+                        <Button fx:id="num1" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="nume1" />
+                        <Button fx:id="nume2" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="nume2" />
+                        <Button fx:id="nume3" layoutX="22.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="nume3" />
                      </children>
                   </AnchorPane>
                </content>
@@ -43,9 +43,9 @@
                   <Font name="Times New Roman Bold" size="24.0" />
                </font>
             </Label>
-            <ScrollPane layoutX="136.0" layoutY="64.0" prefHeight="336.0" prefWidth="277.0" style="-fx-background-radius: 10px;">
+            <ScrollPane layoutX="136.0" layoutY="64.0" prefHeight="336.0" prefWidth="280.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #9ca983;">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #DAF7A6;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
                      <children>
                         <Button fx:id="link1" layoutX="19.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viata sanatoasa" textFill="WHITE" />
                         <Button fx:id="link6" layoutX="19.0" layoutY="306.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturi pentru o viata sanatosa" textFill="WHITE" />
