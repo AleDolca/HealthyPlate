@@ -1,124 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<<<<<<< HEAD
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-=======
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
->>>>>>> HP-35-se-creeaza-pagina-principala-unde-sunt-afisate-articolel
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
-<<<<<<< HEAD
-<?import javafx.scene.text.Text?>
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecthp.PrincipalController">
-    <children>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
-            <children>
-                <ImageView fitHeight="83.0" fitWidth="168.0" layoutX="64.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-=======
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecthp.PagPrincipalaController">
     <children>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
             <children>
                 <ImageView fitHeight="76.0" fitWidth="200.0" layoutX="55.0" pickOnBounds="true" preserveRatio="true">
->>>>>>> HP-35-se-creeaza-pagina-principala-unde-sunt-afisate-articolel
                     <image>
                         <Image url="@../../../Photo/Conectare/logo.png" />
                     </image>
                 </ImageView>
-<<<<<<< HEAD
-            </children>
-        </AnchorPane>
-        <AnchorPane prefHeight="400.0" prefWidth="398.0" style="-fx-background-color: #DAF7A6;">
-         <children>
-            <ScrollPane layoutX="23.0" layoutY="71.0" prefHeight="325.0" prefWidth="398.0" style="-fx-background-color: #DAF7A6;" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="71.0">
-               <content>
-                  <AnchorPane prefHeight="555.0" prefWidth="388.0" style="-fx-background-color: #DAF7A6;">
-                     <children>
-                        <Button fx:id="link1" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="263.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text=" Reguli pentru o viata sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link2" layoutX="19.0" layoutY="70.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="263.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="Informatii utile sanatoase" textFill="WHITE" />
-                        <Button fx:id="link3" layoutX="21.0" layoutY="118.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="261.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="alimentatie sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link4" layoutX="20.0" layoutY="161.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="262.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="sfaturile medicului nutritionist" textFill="WHITE" />
-                        <Button fx:id="link5" layoutX="21.0" layoutY="208.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="262.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="ce inseamna o viata sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link7" layoutX="20.0" layoutY="297.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="262.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="10 sfaturi pentru o dieta sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link6" layoutX="21.0" layoutY="251.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="262.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="sfaturi pentru o viata sanatosa" textFill="WHITE" />
-                        <Button layoutX="18.0" layoutY="344.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="263.0" style="-fx-background-color: #424a32; -fx-background-radius: 15px;" text="Dieta celor mici" textFill="WHITE" />
-=======
-            <ScrollPane layoutX="8.0" layoutY="89.0" prefHeight="312.0" prefWidth="171.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;">
-               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="156.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;">
-                     <children>
-                        <Button fx:id="num1" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="nume1" />
-                        <Button fx:id="nume2" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="nume2" />
-                        <Button fx:id="nume3" layoutX="22.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="nume3" />
->>>>>>> HP-35-se-creeaza-pagina-principala-unde-sunt-afisate-articolel
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
-<<<<<<< HEAD
-            <Label layoutX="14.0" layoutY="13.0" text="Healthy" textFill="#5c6846">
-               <font>
-                  <Font name="Times New Roman Bold" size="26.0" />
-               </font>
-            </Label>
-            <Label layoutX="108.0" layoutY="14.0" text="Plate" textFill="#76855a">
-=======
+                <ScrollPane layoutX="8.0" layoutY="89.0" prefHeight="312.0" prefWidth="171.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="156.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;">
+                            <children>
+                                <Button fx:id="nume1" layoutX="1.0" layoutY="24.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="Dr. L. Bratu" />
+                                <Button fx:id="nume2" layoutX="2.0" layoutY="78.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="Dr. M. Ursache" />
+                                <Button fx:id="nume3" layoutX="1.0" layoutY="130.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="Dr. E. L. Dumitrache" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
             </children>
         </AnchorPane>
         <AnchorPane prefHeight="400.0" prefWidth="425.0" style="-fx-background-color: #DAF7A6;">
-         <children>
-            <Label layoutX="14.0" layoutY="14.0" text="Healthy" textFill="#4f593c">
->>>>>>> HP-35-se-creeaza-pagina-principala-unde-sunt-afisate-articolel
+            <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Healthy" textFill="#4f593c">
+                    <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="96.0" layoutY="14.0" text="Plate" textFill="#839464">
+                    <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ScrollPane layoutX="136.0" layoutY="64.0" prefHeight="336.0" prefWidth="280.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #9ca983;">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
+                            <children>
+                                <Button fx:id="link1" layoutX="19.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viață sănătoasă" textFill="WHITE" />
+                                <Button fx:id="link6" layoutX="19.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturi pentru o viață sănătoasă" textFill="WHITE" />
+                                <Button fx:id="link5" layoutX="19.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Ce înseamnă o viață sănătoasă" textFill="WHITE" />
+                                <Button fx:id="link4" layoutX="19.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturile medicului nutriționist" textFill="WHITE" />
+                                <Button fx:id="link3" layoutX="19.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Alimentație sănătoasă" textFill="WHITE" />
+                                <Button fx:id="link2" layoutX="19.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Informații utile sănătoase" textFill="WHITE" />
+                                <Button fx:id="link8" layoutX="19.0" layoutY="417.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Dieta celor mici" textFill="WHITE" />
+                                <Button fx:id="llnk7" layoutX="19.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="10 sfaturi pentru o dietă sănătoasă" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <Label layoutX="14.0" layoutY="78.0" prefHeight="12.0" prefWidth="113.0" text="Află mai multe:" textFill="#4f593c">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            <Button fx:id="buton_deconectare" layoutX="332.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Deconectare" underline="true">
                <font>
-                  <Font name="Times New Roman Bold" size="24.0" />
+                  <Font name="Times New Roman" size="13.0" />
                </font>
-            </Label>
-<<<<<<< HEAD
-=======
-            <Label layoutX="96.0" layoutY="14.0" text="Plate" textFill="#839464">
-               <font>
-                  <Font name="Times New Roman Bold" size="24.0" />
-               </font>
-            </Label>
-            <ScrollPane layoutX="136.0" layoutY="64.0" prefHeight="336.0" prefWidth="280.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #9ca983;">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
-                     <children>
-                        <Button fx:id="link1" layoutX="19.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viata sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link6" layoutX="19.0" layoutY="306.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturi pentru o viata sanatosa" textFill="WHITE" />
-                        <Button fx:id="link5" layoutX="19.0" layoutY="248.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Ce inseamna o viata sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link4" layoutX="19.0" layoutY="190.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturile medicului nutritionist" textFill="WHITE" />
-                        <Button fx:id="link3" layoutX="19.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Alimentatie sanatoasa" textFill="WHITE" />
-                        <Button fx:id="link2" layoutX="19.0" layoutY="69.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Informatii utile sanatoase" textFill="WHITE" />
-                        <Button fx:id="link8" layoutX="19.0" layoutY="417.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Dieta celor mici" textFill="WHITE" />
-                        <Button fx:id="llnk7" layoutX="19.0" layoutY="362.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="10 sfaturi pentru o dieta sanatoasa" textFill="WHITE" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </ScrollPane>
-            <Label layoutX="14.0" layoutY="78.0" prefHeight="12.0" prefWidth="113.0" text="Afla mai multe:" textFill="#4f593c">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
->>>>>>> HP-35-se-creeaza-pagina-principala-unde-sunt-afisate-articolel
-         </children>
+            </Button>
+            <Button fx:id="buton_chat" layoutX="276.0" layoutY="8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #DAF7A6;">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@../../../Photo/icons8.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            </children>
         </AnchorPane>
     </children>
 </HBox>
