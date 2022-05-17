@@ -31,7 +31,7 @@ public class DeconController implements Initializable {
         });
     }
     public void setUserInformation(String nume, String rol) {
-        label_welcome.setText("Bine ai venit " + nume + "!");
-        label_rol.setText("Rolul tău este - " + rol + "!");
+        label_welcome.setText("Îți mulțumim pentru utilizare!");
+        label_rol.setText("O zi frumoasă!");
     }
 }

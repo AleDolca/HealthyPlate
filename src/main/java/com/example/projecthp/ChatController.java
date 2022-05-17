@@ -28,6 +28,9 @@ public class ChatController implements Initializable {
     private Button button_send;
 
     @FXML
+    private Button buton_back;
+
+    @FXML
     private TextField tf_message;
 
     @FXML
@@ -53,6 +56,14 @@ public class ChatController implements Initializable {
                 sp_main.setVvalue((Double) newValue);
             }
         });
+
+        buton_back.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.schimbaScene(event,"pagPrincipala.fxml", "HealthyPlate", null, null);
+            }
+        });
+
 
         client.receiveMessageFromServer(vbox_messages);
 

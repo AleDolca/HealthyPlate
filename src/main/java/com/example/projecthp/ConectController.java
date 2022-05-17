@@ -30,7 +30,6 @@ public class ConectController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 ConexiuneBD.conectareUser(event, txt_nume.getText(), txt_parola.getText());
-
             }
         });
 

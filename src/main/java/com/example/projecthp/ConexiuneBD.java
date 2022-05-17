@@ -117,7 +117,7 @@ public class ConexiuneBD {
                     String retrievedPassword = resultSet.getString("parola");
                     String retrievedRole = resultSet.getString("rol");
                     if(retrievedPassword.equals(parola)){
-                        schimbaScene(event, "deconectare.fxml", "Healthy Plate", nume, retrievedRole);
+                        schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
                     } else {
                         System.out.printf("Parola este incorecta!\n");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
