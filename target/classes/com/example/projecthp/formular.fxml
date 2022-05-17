@@ -39,27 +39,21 @@
                 </Label>
                 <TextField fx:id="txt_nume" alignment="CENTER" layoutX="195.0" layoutY="134.0" promptText="nume" />
                 <TextField fx:id="txt_email" alignment="CENTER" layoutX="195.0" layoutY="173.0" promptText="email" />
-            <Label layoutX="24.0" layoutY="223.0" text="Competențe profesionale">
+            <Label layoutX="27.0" layoutY="218.0" text="Specializare">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="27.0" layoutY="266.0" text="Specializare">
+            <Label layoutX="27.0" layoutY="267.0" text="Locul de muncă">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="304.0" text="Locul de muncă">
+            <TextField fx:id="txt_specializare" alignment="CENTER" layoutX="195.0" layoutY="213.0" promptText="specializare" />
+            <TextField fx:id="txt_locdemunca" alignment="CENTER" layoutX="195.0" layoutY="262.0" promptText="loc de munca" />
+            <Button fx:id="buton_salveaza" layoutX="271.0" layoutY="339.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Salvează">
                <font>
                   <Font name="Times New Roman" size="14.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txt_competente" alignment="CENTER" layoutX="195.0" layoutY="219.0" promptText="competente profesionale" />
-            <TextField fx:id="txt_specializare" alignment="CENTER" layoutX="195.0" layoutY="262.0" promptText="specializare" />
-            <TextField fx:id="txt_locdemunca" alignment="CENTER" layoutX="195.0" layoutY="300.0" promptText="loc de munca" />
-            <Button fx:id="txt_salveaza" layoutX="293.0" layoutY="353.0" mnemonicParsing="false" onAction="#onClickButton" style="-fx-background-color: #FFFFFF;" text="Salvează">
-               <font>
-                  <Font name="HoloLens MDL2 Assets" size="14.0" />
                </font>
             </Button>
             </children>

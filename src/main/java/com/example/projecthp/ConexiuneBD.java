@@ -61,7 +61,6 @@ public class ConexiuneBD {
                 psInsert.setString(3, rol);
                 psInsert.executeUpdate();
 
-                schimbaScene(event, "deconectare.fxml", "Healthy Plate", nume, rol);
 
             }
         } catch (SQLException e) {
@@ -97,6 +96,9 @@ public class ConexiuneBD {
             }
         }
     }
+
+
+
     public static void  conectareUser(ActionEvent event, String nume, String parola){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -108,7 +110,7 @@ public class ConexiuneBD {
             resultSet = preparedStatement.executeQuery();
 
             if(!resultSet.isBeforeFirst()){
-                System.out.printf("Utilizatorul nu a fost gasit.\n");
+                System.out.println("Utilizatorul nu a fost gasit.\n");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Datele introduse sunt incorecte.\n");
                 alert.show();
@@ -119,7 +121,7 @@ public class ConexiuneBD {
                     if(retrievedPassword.equals(parola)){
                         schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
                     } else {
-                        System.out.printf("Parola este incorecta!\n");
+                        System.out.println("Parola este incorecta!\n");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Datele introduse sunt incorecte.\n");
                         alert.show();
@@ -147,6 +149,68 @@ public class ConexiuneBD {
                 try {
                     connection.close();
                 }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static void inregistrareMedic(ActionEvent event, String nume, String email, String specializare, String loc_munca) {
+        Connection connection = null;
+        PreparedStatement psInsert = null;
+        PreparedStatement psCheckUserExists = null;
+        ResultSet resultSet = null;
+
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "rootpassword");
+            psCheckUserExists = connection.prepareStatement("SELECT * FROM formular WHERE nume = ?");
+            psCheckUserExists.setString(1, nume);
+            resultSet = psCheckUserExists.executeQuery();
+
+            if (resultSet.isBeforeFirst()) {
+                System.out.println("Acest medic este deja inregistrat!\n");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Nu puteti folosi acest nume.\n");
+                alert.show();
+            } else {
+                psInsert = connection.prepareStatement("INSERT INTO formular (nume, email, specializare, loc_munca) VALUES (?, ?, ?, ?)");
+                psInsert.setString(1, nume);
+                psInsert.setString(2, email);
+                psInsert.setString(3, specializare);
+                psInsert.setString(4,loc_munca);
+                psInsert.executeUpdate();
+
+
+                schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psCheckUserExists != null){
+                try {
+                    psCheckUserExists.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(psInsert!=null){
+                try {
+                    psInsert.close();
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            if(connection!=null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
