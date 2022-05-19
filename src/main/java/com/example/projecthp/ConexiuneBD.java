@@ -216,4 +216,65 @@ public class ConexiuneBD {
             }
         }
     }
+
+    public static void inregistrareArticol(ActionEvent event, String nume_autor, String nume_articol, String link) {
+        Connection connection = null;
+        PreparedStatement psInsert = null;
+        PreparedStatement psCheckUserExists = null;
+        ResultSet resultSet = null;
+
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "rootpassword");
+            psCheckUserExists = connection.prepareStatement("SELECT * FROM articole WHERE nume_articol = ?");
+            psCheckUserExists.setString(1, nume_articol);
+            resultSet = psCheckUserExists.executeQuery();
+
+            if (resultSet.isBeforeFirst()) {
+                System.out.println("Acest articol este deja adaugat!\n");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Nu puteti folosi acest nume de articol.\n");
+                alert.show();
+            } else {
+                psInsert = connection.prepareStatement("INSERT INTO articole (nume_autor, nume_articol, link) VALUES (?, ?, ?)");
+                psInsert.setString(1, nume_autor);
+                psInsert.setString(2, nume_articol);
+                psInsert.setString(3, link);
+                psInsert.executeUpdate();
+
+
+                //schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psCheckUserExists != null) {
+                try {
+                    psCheckUserExists.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psInsert != null) {
+                try {
+                    psInsert.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
