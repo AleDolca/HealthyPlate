@@ -13,34 +13,16 @@ import java.util.ResourceBundle;
 public class PagPrincipalaController implements Initializable {
 
     @FXML
+    private Button buton_articole;
+
+    @FXML
     private Button buton_chat;
 
     @FXML
     private Button buton_deconectare;
 
     @FXML
-    private Button link1;
-
-    @FXML
-    private Button link2;
-
-    @FXML
-    private Button link3;
-
-    @FXML
-    private Button link4;
-
-    @FXML
-    private Button link5;
-
-    @FXML
-    private Button link6;
-
-    @FXML
-    private Button link8;
-
-    @FXML
-    private Button llnk7;
+    private Button buton_medici;
 
     @FXML
     private Button nume1;
@@ -85,6 +67,13 @@ public class PagPrincipalaController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 ConexiuneBD.schimbaScene(event,"doctor3.fxml", "Profil", null, null);
+            }
+        });
+
+        buton_medici.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.schimbaScene(event,"tabelMedici.fxml", "Medici", null, null);
             }
         });
     }

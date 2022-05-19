@@ -25,6 +25,7 @@
                                 <Button fx:id="nume1" layoutX="1.0" layoutY="24.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="Dr. L. Bratu" />
                                 <Button fx:id="nume2" layoutX="2.0" layoutY="78.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="Dr. M. Ursache" />
                                 <Button fx:id="nume3" layoutX="1.0" layoutY="130.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;" text="Dr. E. L. Dumitrache" />
+                                <Button fx:id="buton_medici" layoutX="44.0" layoutY="203.0" mnemonicParsing="false" style="-fx-background-color: #4f593c;" text="Mai multe" textFill="#fffefe" underline="true" />
                             </children>
                         </AnchorPane>
                     </content>
@@ -43,40 +44,73 @@
                         <Font name="Times New Roman Bold" size="24.0" />
                     </font>
                 </Label>
-                <ScrollPane layoutX="136.0" layoutY="64.0" prefHeight="336.0" prefWidth="280.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #9ca983;">
+                <ScrollPane layoutX="178.0" layoutY="64.0" prefHeight="336.0" prefWidth="237.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #9ca983;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="230.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
                             <children>
-                                <Button fx:id="link1" layoutX="19.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viață sănătoasă" textFill="WHITE" />
-                                <Button fx:id="link6" layoutX="19.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturi pentru o viață sănătoasă" textFill="WHITE" />
-                                <Button fx:id="link5" layoutX="19.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Ce înseamnă o viață sănătoasă" textFill="WHITE" />
-                                <Button fx:id="link4" layoutX="19.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturile medicului nutriționist" textFill="WHITE" />
-                                <Button fx:id="link3" layoutX="19.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Alimentație sănătoasă" textFill="WHITE" />
-                                <Button fx:id="link2" layoutX="19.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Informații utile sănătoase" textFill="WHITE" />
-                                <Button fx:id="link8" layoutX="19.0" layoutY="417.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Dieta celor mici" textFill="WHITE" />
-                                <Button fx:id="llnk7" layoutX="19.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="10 sfaturi pentru o dietă sănătoasă" textFill="WHITE" />
+                                <Button fx:id="buton_articole" layoutX="92.0" layoutY="460.0" mnemonicParsing="false" style="-fx-background-color: #9ca983;" text="Mai multe" textFill="WHITE" underline="true" />
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="30.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viață sănătoasă" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="421.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Alimentație sănătoasă" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="371.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Informații utile sănătoase" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="309.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturi pentru o viață sănătoasă" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="257.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Ce înseamnă o viață sănătoasă" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="196.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Sfaturile medicului nutriționist" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="138.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="10 sfaturi pentru o dietă sănătoasă" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="84.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Dieta celor mici" textFill="WHITE">
+                                    <font>
+                                        <Font name="Times New Roman" size="12.0" />
+                                    </font>
+                                </Label>
                             </children>
                         </AnchorPane>
                     </content>
                 </ScrollPane>
-                <Label layoutX="14.0" layoutY="78.0" prefHeight="12.0" prefWidth="113.0" text="Află mai multe:" textFill="#4f593c">
+                <Button fx:id="buton_deconectare" layoutX="332.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Deconectare" underline="true">
                     <font>
-                        <Font size="13.0" />
+                        <Font name="Times New Roman" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="buton_chat" layoutX="276.0" layoutY="8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #DAF7A6;">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0">
+                            <image>
+                                <Image url="@../../../Photo/icons8.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Label layoutX="17.0" layoutY="64.0" text="Află mai multe:">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
                     </font>
                 </Label>
-            <Button fx:id="buton_deconectare" layoutX="332.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Deconectare" underline="true">
-               <font>
-                  <Font name="Times New Roman" size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="buton_chat" layoutX="276.0" layoutY="8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #DAF7A6;">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0">
-                     <image>
-                        <Image url="@../../../Photo/icons8.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
             </children>
         </AnchorPane>
     </children>
