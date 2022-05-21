@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecthp.PagPrincipalaController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projecthp.PrincipalController">
     <children>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
             <children>
@@ -48,7 +48,7 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="230.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
                             <children>
-                                <Button fx:id="buton_articole" layoutX="80.0" layoutY="460.0" mnemonicParsing="false" style="-fx-background-color: #9ca983;" text="Mai multe" textFill="WHITE" underline="true" />
+                                <Button fx:id="buton_articole" layoutX="65.0" layoutY="462.0" mnemonicParsing="false" style="-fx-background-color: #9ca983;" text="Adaugă articole" textFill="WHITE" underline="true" />
                                 <Label alignment="CENTER" layoutX="14.0" layoutY="30.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viață sănătoasă" textFill="WHITE">
                                     <font>
                                         <Font name="Times New Roman" size="12.0" />

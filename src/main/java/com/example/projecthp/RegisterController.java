@@ -43,12 +43,6 @@ public class RegisterController  implements Initializable {
                 String toggleName = ((RadioButton) toggleGroup.getSelectedToggle()).getText();
                 if( !txt_nume.getText().trim().isEmpty() && !txt_parola.getText().trim().isEmpty()){
                     ConexiuneBD.inregistrareUser(event, txt_nume.getText(), txt_parola.getText(), toggleName);
-                    if(rb_pacient.isSelected()){
-                        ConexiuneBD.schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
-                    }
-                    else if(rb_medic.isSelected()){
-                        ConexiuneBD.schimbaScene(event, "formular.fxml", "Formular", null, null);
-                    }
                 } else {
                     System.out.println("Completeaza toate campurile.\n");
                     Alert alert = new Alert(Alert.AlertType.ERROR);

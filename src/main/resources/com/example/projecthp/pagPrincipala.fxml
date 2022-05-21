@@ -48,7 +48,7 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="230.0" style="-fx-background-color: #9ca983; -fx-background-radius: 10px;">
                             <children>
-                                <Button fx:id="buton_articole" layoutX="92.0" layoutY="460.0" mnemonicParsing="false" style="-fx-background-color: #9ca983;" text="Mai multe" textFill="WHITE" underline="true" />
+                                <Button fx:id="buton_articole" layoutX="80.0" layoutY="460.0" mnemonicParsing="false" style="-fx-background-color: #9ca983;" text="Mai multe" textFill="WHITE" underline="true" />
                                 <Label alignment="CENTER" layoutX="14.0" layoutY="30.0" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: #4f593c; -fx-background-radius: 10px;" text="Reguli pentru o viață sănătoasă" textFill="WHITE">
                                     <font>
                                         <Font name="Times New Roman" size="12.0" />
