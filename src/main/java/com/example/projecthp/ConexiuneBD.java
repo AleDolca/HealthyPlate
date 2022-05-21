@@ -8,9 +8,28 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 
 public class ConexiuneBD {
+    public static String encodePassword(String salt, String password){
+        MessageDigest md = getMessageDigest();
+        md.update(salt.getBytes(StandardCharsets.UTF_8));
+        byte[] hashedPassword = md.digest(password.getBytes(StandardCharsets.UTF_8));
+        return new String(hashedPassword,StandardCharsets.UTF_8).replace("\"", "");
+    }
+
+    private static MessageDigest getMessageDigest(){
+        MessageDigest md;
+        try{
+            md = MessageDigest.getInstance("SHA-512");
+        }catch(NoSuchAlgorithmException e){
+            throw new IllegalStateException("SHA-512 does not exist!");
+        }
+        return md;
+    }
     public static void schimbaScene(ActionEvent event, String fxmlFile, String titlu, String nume, String rol) {
         Parent root = null;
 
@@ -57,11 +76,15 @@ public class ConexiuneBD {
             } else {
                 psInsert = connection.prepareStatement("INSERT INTO utilizatori (nume, parola, rol) VALUES (?, ?, ?)");
                 psInsert.setString(1, nume);
-                psInsert.setString(2, parola);
+                psInsert.setString(2, encodePassword(nume, parola));
                 psInsert.setString(3, rol);
                 psInsert.executeUpdate();
 
-
+                if(rol.equals("Pacient")) {
+                    schimbaScene(event, "pagPrincipala.fxml", "Healthy Plate", null, null);
+                } else if(rol.equals("Medic")) {
+                    schimbaScene(event, "formular.fxml", "Formular", null, null);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -118,8 +141,15 @@ public class ConexiuneBD {
                 while (resultSet.next()) {
                     String retrievedPassword = resultSet.getString("parola");
                     String retrievedRole = resultSet.getString("rol");
-                    if(retrievedPassword.equals(parola)){
-                        schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
+                    if(retrievedPassword.equals(encodePassword(nume,parola))){
+                        if(retrievedRole.equals("Pacient")) {
+                            schimbaScene(event, "pagPrincipala.fxml", "Healthy Plate", null, null);
+                        } else if(retrievedRole.equals("Medic")) {
+                            schimbaScene(event, "principal.fxml", "Healthy Plate", null, null);
+                        }
+
+
+
                     } else {
                         System.out.println("Parola este incorecta!\n");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -181,7 +211,7 @@ public class ConexiuneBD {
                 psInsert.executeUpdate();
 
 
-                schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
+                schimbaScene(event, "principal.fxml", "Healthy Plate", null, null);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -242,7 +272,7 @@ public class ConexiuneBD {
                 psInsert.executeUpdate();
 
 
-                //schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
+                schimbaScene(event, "principal.fxml", "Healthy Plate", null, null);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -1,6 +1,9 @@
 package com.example.projecthp;
+
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.event.WeakEventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -42,5 +45,13 @@ public class AdaugaArticolController implements Initializable {
                 }
             }
         });
+
+        buton_inapoi.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.schimbaScene(event, "principal.fxml", "Healthy Plate", null, null);
+            }
+        });
+
     }
 }

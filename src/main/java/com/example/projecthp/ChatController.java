@@ -60,7 +60,7 @@ public class ChatController implements Initializable {
         buton_back.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ConexiuneBD.schimbaScene(event,"pagPrincipala.fxml", "HealthyPlate", null, null);
+                ConexiuneBD.schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
             }
         });
 

@@ -78,7 +78,7 @@ public class TabelMediciController implements Initializable {
         buton_inapoi.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ConexiuneBD.schimbaScene(event, "pagPrincipala.fxml", "HealthyPlate", null, null);
+                ConexiuneBD.schimbaScene(event, "pagPrincipala.fxml", "Healthy Plate", null, null);
             }
         });
     }

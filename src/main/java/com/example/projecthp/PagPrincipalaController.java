@@ -76,5 +76,12 @@ public class PagPrincipalaController implements Initializable {
                 ConexiuneBD.schimbaScene(event,"tabelMedici.fxml", "Medici", null, null);
             }
         });
+
+        buton_articole.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ConexiuneBD.schimbaScene(event, "tabelArticole.fxml", "Articole", null, null);
+            }
+        });
     }
 }
